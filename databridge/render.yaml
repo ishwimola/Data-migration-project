@@ -1,0 +1,42 @@
+services:
+  - type: web
+    name: databridge-backend
+    runtime: python
+    rootDir: Databridge_backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.0"
+      - key: DATABASE_URL
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+      - key: AI_MODE
+        value: groq
+      - key: DUCKDB_PROJECTS_DIR
+        value: ./projects
+      - key: UPLOADS_DIR
+        value: ./uploads
+      - key: CONFIDENCE_THRESHOLD
+        value: "0.85"
+      - key: BATCH_SIZE
+        value: "500"
+      - key: MAX_FILE_SIZE_MB
+        value: "30"
+      - key: AIRBYTE_ENABLE_UNSAFE_CODE
+        value: "true"
+      - key: DATAVERSE_URL
+        sync: false
+      - key: AZURE_CLIENT_ID
+        sync: false
+      - key: AZURE_CLIENT_SECRET
+        sync: false
+      - key: AZURE_TENANT_ID
+        sync: false
+      - key: DATAVERSE_API_VERSION
+        value: v9.2
+      - key: TARGET_ENTITY
+        value: account

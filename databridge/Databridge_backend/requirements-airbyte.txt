@@ -1,0 +1,6 @@
+# TASK-028: Airbyte Integration (Phase 2) — Optional dependency
+# Install only when using Airbyte source connectors:
+#   pip install -r requirements-airbyte.txt
+#
+# PyAirbyte does not require Docker.
+airbyte>=0.23.0
