@@ -252,7 +252,7 @@ For questions or support, contact your team lead.
 
 ## 🔄 Version History
 
-- **v1.1.0** - Integration Complete (June 2026)
+- **v1.1.0** - Integration Complete (June 2026) 
   - Added Projects Management API
   - Global error handling (backend & frontend)
   - Comprehensive test suites
